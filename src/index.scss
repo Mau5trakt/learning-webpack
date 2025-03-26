@@ -1,0 +1,18 @@
+*{
+    transition: all 400ms ease-in-out
+}
+
+$primary-color: #e8867d;
+
+button{
+    background: $primary-color;
+    font-size: 20px;
+
+    &:hover{
+        opacity: 0.2;
+    }
+}
+
+h1{
+    color: #5ac321;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "curso_webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --mode development",
+    "dev-foo": "webpack --mode development --entry ./foo/src/index.js --output-path ./foo",
+    "build-foo": "webpack --mode production --entry ./foo/src/index.js --output-path ./foo/dist",
+    "dev-server": "npx webpack-serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "sass": "^1.86.0",
+    "sass-loader": "^16.0.5",
+    "toastify-js": "^1.12.0"
+  }
+}
