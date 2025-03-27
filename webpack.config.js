@@ -50,7 +50,7 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
         filename: 'css/[name].[contenthash].css',
-        chunkFilename: 'css/[id].[contenthash].css',
+        //chunkFilename: 'css/[id].[contenthash].css',
         
         
 
@@ -62,12 +62,12 @@ module.exports = {
         writeToDisk: true,
     },
 
-    proxy: [
+    /*proxy: [
         {
             context: ['/'],
             
         }
-    ],
+    ],*/
     client: {
         overlay: {
             errors: true,
@@ -93,5 +93,8 @@ module.exports = {
     modules: ['node_modules'],
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
 
-  }
+  },
+  output:{
+    clean: true,
+  },
 };

@@ -1,5 +1,7 @@
+
 *{
-    transition: all 400ms ease-in-out
+    box-sizing: border-box;
+    transition: all 400ms ease-in-out;
 }
 
 $primary-color: #e8867d;
@@ -15,4 +17,76 @@ button{
 
 h1{
     color: #5ac321;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: red;
+        color: red;
+        height: 6px;
+
+    }
+    
+}
+
+.ctn{
+    animation: opacity 600ms ease-in-out;
+}
+
+@keyframes opacity{
+    from {opacity: 0;
+    transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    &__ctn{
+        max-width: 1440px;
+        width: 100%;
+        border: 1px solid red;
+        &-gallery{
+            width: 100%;
+            display: flex;
+
+            &--item{
+                position: relative;
+                width: 33%;
+
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    
+                }
+                &-primary{
+                    z-index: 0;
+                }
+
+                &-secondary{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    opacity: 0;
+
+                    &:hover{
+                        opacity: 1;
+                    }
+
+                }
+            }
+        }
+    }
 }
